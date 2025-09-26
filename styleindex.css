@@ -1,0 +1,200 @@
+html{
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, rgb(0, 0, 0) 0%, rgba(183, 75, 75, 0.1) 50%, rgb(0, 0, 0) 100%); /* Enhanced from plain black */
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Improved from sans-serif */
+    color: azure;
+    margin: 40px auto; /* Centered with your margin */
+    overflow-x: hidden;
+    width: 95%;
+    min-height: 100vh; /* Changed from 80vh for full page usability */
+    position: relative;
+}
+
+/* Subtle animated background particles (consistent with index page) */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, rgba(183, 75, 75, 0.5), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(183, 75, 75, 0.3), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(183, 75, 75, 0.4), transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(183, 75, 75, 0.2), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: float 20s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+header {
+    border: 2px solid #b74b4b;
+    background-color: #000000;
+    padding: 2rem;
+    text-align: center;
+    display: flex; /* Added to enable justify-content */
+    justify-content: space-between; /* Your intent, but centered nav below handles main alignment */
+    align-items: center; /* Vertical centering */
+    font-size: 2rem; /* Reduced from 40px for better scaling; use media queries for larger */
+    border-radius: 2rem;
+    font-weight: 600;
+    margin: 20px auto; /* Centered */
+    word-spacing: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Fixed: Added 'ease' and 's' for seconds */
+    width: fit-content; /* Prevents full-width stretch */
+}
+
+header:hover {
+    transform: scale3d(1.03, 1.03, 1.03); /* Fixed: Proper 3D scale */
+    background-color: #b74b4b; /* Changed to match theme (from #be7c7c) */
+    color: black;
+    box-shadow: 0 0 25px #b74b4b; /* Fixed: Proper shadow syntax */
+}
+main{
+    color: azure;
+}
+.about,
+.active,
+.contact,
+.home-link {
+    color: #b74b4b; /* Your style */
+    text-decoration: none; /* Your style */
+    padding: 0.5rem 1rem; /* Enhanced: Minimal padding so hover bg shows (your hovers need this) */
+    border: 2px solid #b74b4b; /* Enhanced: Border for definition, like your theme */
+    border-radius: 1rem; /* Base radius for pill shape on hover */
+    font-weight: 600; /* Similar to header */
+    font-size: 1.1rem; /* Readable size */
+    transition: all 0.3s ease; /* Matches header */
+    background: transparent; /* Ensures hover bg appears */
+    position: relative; /* For potential ripples if expanded */
+}
+
+.about:hover,
+.active:hover,
+.contact:hover,
+.home-link:hover {
+    transform: scale3d(1.03, 1.03, 1.03); 
+    color: black;
+    background-color: #b74b4b; 
+    border-radius: 1.6rem; 
+    box-shadow: 0 0 15px rgba(183, 75, 75, 0.4); 
+}
+nav {
+    display: flex;
+    justify-content: center; 
+    gap: 150px; 
+    width: 100%; 
+    flex-wrap: wrap; 
+}
+section{
+    min-height: 100vh;
+    padding-left: rem8;
+}
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: rgb(240, 248, 255); 
+    gap: 1rem; 
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 2rem 0;
+    box-shadow: 0 10px 30px rgba(183, 75, 75, 0.2); 
+    animation: fadeIn 1s ease-out; 
+}
+
+.home-image {
+    position: relative;
+    width: 32vw; 
+    border-radius: 50%;
+    box-shadow: 0 0 25px #b74b4b; 
+    cursor: pointer;
+    transition: all 0.2s linear; 
+    right: 2%;
+}
+
+.home-image img {
+    width: 100%; 
+    height: auto;
+    border-radius: 50%; 
+    display: block;
+    border: 3px solid #b74b4b; 
+    animation: floatImage 3s ease-in-out infinite; 
+}
+.home-image:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 40px #b74b4b; 
+}
+.home .Home-Introduction h1 {
+    font-size: 3rem; 
+    font-weight: 700;
+    line-height: 1.3;
+    font-family: 'Orbitron', monospace; 
+    color: azure;
+    text-shadow: 0 0 10px rgba(183, 75, 75, 0.5);
+    margin-bottom: 0.5rem;
+}
+p {
+    line-height: 2; 
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+span {
+    color: #b74b4b; 
+    text-shadow: 0 0 5px #b74b4b;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+.Home-Introduction h3 {
+    font-size: 4rem; 
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    font-family: 'Orbitron', monospace;
+    color: azure;
+    text-shadow: 0 0 10px rgba(183, 75, 75, 0.5);
+}
+q {
+    font-style: italic;
+    padding: 1rem;
+    background: rgba(183, 75, 75, 0.1);
+    border-left: 4px solid #b74b4b;
+    border-radius: 5px;
+    display: block;
+    margin-top: 1rem;
+}
+
+mark {
+    background-color: rgba(183, 75, 75, 0.3) !important; 
+    color: azure;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(183, 75, 75, 0.5);
+}
+.home-image {
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #b74b4b;
+    cursor: pointer;
+    transition: 0.2s linear;
+    right: 2%;
+}
+.home-image:hover{
+    transform: scale3d(1.8rem);
+    font-weight: 500;
+}
+
