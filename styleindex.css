@@ -43,24 +43,24 @@ header {
     background-color: #000000;
     padding: 2rem;
     text-align: center;
-    display: flex; /* Added to enable justify-content */
-    justify-content: space-between; /* Your intent, but centered nav below handles main alignment */
-    align-items: center; /* Vertical centering */
-    font-size: 2rem; /* Reduced from 40px for better scaling; use media queries for larger */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    font-size: 2rem;
     border-radius: 2rem;
     font-weight: 600;
-    margin: 20px auto; /* Centered */
+    margin: 20px auto; 
     word-spacing: 5px;
     cursor: pointer;
-    transition: all 0.3s ease; /* Fixed: Added 'ease' and 's' for seconds */
-    width: fit-content; /* Prevents full-width stretch */
+    transition: all 0.3s ease; 
+    width: fit-content; 
 }
 
 header:hover {
-    transform: scale3d(1.03, 1.03, 1.03); /* Fixed: Proper 3D scale */
-    background-color: #b74b4b; /* Changed to match theme (from #be7c7c) */
+    transform: scale3d(1.03, 1.03, 1.03); 
+    background-color: #b74b4b; 
     color: black;
-    box-shadow: 0 0 25px #b74b4b; /* Fixed: Proper shadow syntax */
+    box-shadow: 0 0 25px #b74b4b; 
 }
 main{
     color: azure;
@@ -69,16 +69,16 @@ main{
 .active,
 .contact,
 .home-link {
-    color: #b74b4b; /* Your style */
-    text-decoration: none; /* Your style */
-    padding: 0.5rem 1rem; /* Enhanced: Minimal padding so hover bg shows (your hovers need this) */
-    border: 2px solid #b74b4b; /* Enhanced: Border for definition, like your theme */
-    border-radius: 1rem; /* Base radius for pill shape on hover */
-    font-weight: 600; /* Similar to header */
-    font-size: 1.1rem; /* Readable size */
-    transition: all 0.3s ease; /* Matches header */
-    background: transparent; /* Ensures hover bg appears */
-    position: relative; /* For potential ripples if expanded */
+    color: #b74b4b; 
+    text-decoration: none; 
+    padding: 0.5rem 1rem; 
+    border: 2px solid #b74b4b; 
+    border-radius: 1rem;
+    font-weight: 600; 
+    font-size: 1.1rem;
+    transition: all 0.3s ease; 
+    background: transparent; 
+    position: relative;
 }
 
 .about:hover,
@@ -197,4 +197,5 @@ mark {
     transform: scale3d(1.8rem);
     font-weight: 500;
 }
+
 
